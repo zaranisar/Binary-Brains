@@ -1,19 +1,27 @@
 # Binary Brains
-Team members:
-Zara Nisar
-Zaran07@my.yorku.ca
-Lab. 1
-Talha Kapadiya
-talhakap@my.yorku.ca
-Lab. 1
-Layal Haddadin
-layalhad@my.yorku.ca
-Lab. 5
-Arusha Momin
-arusha99@my.yorku.ca
-Lab. 4
+
+Team Member #1:
+Name: Zara Nisar
+Email: Zaran07@my.yorku.ca
+Class: Lab. 1
+
+Team Member #2:
+Name: Talha Kapadiya
+Email: talhakap@my.yorku.ca
+Class: Lab. 1
+
+Team Member #3:
+Name: Layal Haddadin
+Email: layalhad@my.yorku.ca
+Class: Lab. 5
+
+Team Member #4:
+Name: Arusha Momin
+Email: arusha99@my.yorku.ca
+Class: Lab. 4
 
 Project Title: Peace of Mind
+
 Peace of Mind is a password-protected diary that will allow you to keep
 ideas to yourself. Users can make their own accounts and log in using their
 usernames and password to access their personal diaries. When you enter,
@@ -33,11 +41,11 @@ Functional Requirements:
 (e.g.!) and must be a minimum of 8 characters long
 3. The user will only have 3 attempts to input the password correctly or else the account
 will be temporarily locked
-4.The username of the user’s account must be between 7-10 characters long with both
+4. The username of the user’s account must be between 7-10 characters long with both
 letters and numbers
-5.If a user gets locked out of their account, they must answer a security question to gain
+5. If a user gets locked out of their account, they must answer a security question to gain
 access again
-6.The user must provide their phone number and email address &amp; click “forget
+6. The user must provide their phone number and email address &amp; click “forget
 password?” if they wish to reset their password
 7. The user can create a new account by clicking “Create new account”
 8. The user can input the day, month, and year into “Enter date:” to access past diary
