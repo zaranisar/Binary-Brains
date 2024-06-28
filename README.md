@@ -10,16 +10,6 @@ Name: Talha Kapadiya
 Email: talhakap@my.yorku.ca
 Class: Lab. 1
 
-Team Member #3:
-Name: Layal Haddadin
-Email: layalhad@my.yorku.ca
-Class: Lab. 5
-
-Team Member #4:
-Name: Arusha Momin
-Email: arusha99@my.yorku.ca
-Class: Lab. 4
-
 Project Title: Peace of Mind
 
 Peace of Mind is a password-protected diary that will allow you to keep
