@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title> Diary </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Main.css" type="text/css">
+  <script src="jQuery/jquery.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="Main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="maincontent">
+    <div id="box1">
+      <div id="title">
+        <h1>Welcome</h1>
+      </div>
+      <h2>to</h2>
+
+      <div id="title1">
+        <h1>Peace Of Mind</h1>
+      </div>
+      <button onclick="chooseLogin()" id="login">Login</button>
+      <br>
+      <button onclick="chooseSignup()" id="signUp">SignUp</button>
+
+    </div>
+
+    <div id="box2" hidden>
+      <h1 id="two">Peace Of Mind</h1>
+      <div id="id01" class="login">
+        <div class="container">
+          <label id="uname" for="uname"><b>Username:</b></label>
+          <br>
+          <input id="userLogInput" type="text" placeholder="Enter Username" name="uname" required>
+          <br>
+          <label id="psw" for="psw"><b>Password:</b></label>
+          <br>
+          <input id="passLogInput" type="password" placeholder="Enter Password" name="psw" required>
+          <br>
+          <span class="create" onclick="chooseCreate()">Don't have an account? <a href="#">Create Account!</a></span>
+          <br>
+          <button onclick="login()" id="submit" type="submit">Login</button>
+
+        </div>
+        <div class="container">
+          <button onclick="home()" type="button" class="cancelbtn">Cancel</button>
+          <br>
+          <span class="psw" id="forgotpsw" onclick="forgotpsw()">Forgot <a href="#">password?</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="box3" hidden>
+      <h1>Peace Of Mind</h1>
+      <div id="id02" class="signup">
+        <div class="container1">
+          <label id="name" for="name"><b>Name:</b></label>
+          <br>
+          <input id="nameInput" type="text" placeholder="Enter Name" name="name" required>
+          <br>
+          <label id="email" for="email"><b>Email:</b></label>
+          <br>
+          <input id="emailInput" type="text" placeholder="Enter Email" name="email" required>
+          <br>
+          <label id="uname2" for="uname"><b>Username:</b></label>
+          <br>
+          <input id="userInput" type="text" placeholder="Enter Username" name="uname" required>
+          <br>
+          <label id="psw2" for="psw"><b>Password:</b></label>
+          <br>
+          <input id="passInput" type="password" placeholder="Enter Password" name="psw" required>
+          <br>
+          <label id="confirmpsw" for="pswc"><b>Confirm Password:</b></label>
+          <br>
+          <input id="confirmInput" type="password" placeholder="Confirm Password" name="pswc" required>
+          <br>
+          <button onclick="signup()" id="submit" type="submit">Create</button>
+        </div>
+        <div class="container">
+          <button onclick="home2()" type="button" class="cancelbtn">Cancel</button>
+          <br>
+          <span class="existing" onclick="existing_acc()">Already have an <a href="#">Account?</a></span>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="box4" hidden>
+      <h1>Peace of Mind</h1>
+      <div id="id03" class="loggedIn">
+
+        <div class="container">
+            <div class="month">
+              <div class="date">
+              </div>
+            <div class="days">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="calendar-wrapper" id="calendar">
+        <button id="btnPrev" type="button">Prev</button>
+        <button id="btnNext" type="button">Next</button>
+      <div id="divCal"></div>
+      </div>
+       
+      <div id="maincontent">
+      <label class="switch" id="toggle">
+        <input type="checkbox" id="mycheck" onclick="background_change()"></label> 
+        </label>
+      </div>
+        
+      <h4>Todays date is</h4>
+      <p id="date"></p>
+      <button onclick="time()" type="button" id="time"></button>
+      <br><br><br>
+
+      <button id="new_entry" onclick="newEntry()" id="entry">Create New Entry</button>
+      <button id="past_entry" onclick="pastEntry()" id="entry">Search Past Entry</button>
+      <p><button onclick="logout4()" type="button" class="logoutbtn">Logout</button></p>
+    </div>
+  </div>
+  </div>
+
+  <div id="box5" hidden>
+    <h1>Peace of Mind</h1>
+    <br><br><br><br>
+    <div id="id04" class="forgot_psw">
+      <div class="container1">
+        <label id="uname3" for="uname"><b>Username:</b></label>
+        <br>
+        <input id="userC" type="text" placeholder="Enter Username" name="uname" required>
+        <br>
+        <label id="newpsw" for="psw"><b>New Password:</b></label>
+        <br>
+        <input id="newPass" type="password" placeholder="Enter Password" name="psw" required>
+        <br>
+        <label id="newpswC" for="pswc"><b>Confirm Password:</b></label>
+        <br>
+        <input id="newPassC" type="password" placeholder="Confirm Password" name="pswc" required>
+        <br>
+        <button onclick="resetPass()" id="resetpass" type="resetbtn">Reset Password</button>
+        <div class="container">
+          <button onclick="home3()" type="button" class="cancelbtn2">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="newentry" hidden>
+    <h1>Peace of Mind</h1>
+    <input type="text" id="diarytitle" title="Diary Entry Title" placeholder="ENTER TITLE OF ENTRY HERE">
+    <br><br>
+    <h4 id="entryquestion">What's on your mind?</h4>
+    <br>
+    <textarea type="text" id="entrybox" name="newentrybox" size="30" cols="60" rows='8'></textarea><br><br>
+    <div class="container">
+      <h4>Todays date is</h4>
+      <p id="date3"></p>
+      <button onclick="time()" type="button" id="time2"></button>
+      <br><br><br>
+      <p><button onclick="save()" type="button" class="savebtn">Save</button>
+        <button onclick="logout2()" type="button" class="logoutbtn2">Logout</button>
+      </p>
+    </div>
+  </div>
+
+  <div id="journalrecorded" hidden>
+    <h1>Peace of Mind</h1>
+    <h4 id="journaldate">The date is</h4>
+    <p id="currentdate"></p>
+    <h1 id="recorded">*Journal Recorded*</h1>
+
+    <h3 id="diarydate">The diary entry date is</h3>
+    <p id="date2"></p>
+    <div class="container">
+      <h4>Todays date is</h4>
+      <p id="date4"></p>
+      <button onclick="time()" type="button" id="time3"></button>
+      <br><br>
+      <p><button onclick="homepage()" type="button" class="homepagebtn">Back to Homepage</button></p>
+      <p><button onclick="logout3()" type="button" class="logoutbtn">Logout</button></p>
+    </div>
+  </div>
+
+  <div id="passResetted" hidden>
+    <h1>Peace of Mind</h1>
+    <h4 id="journaldate">The date is</h4>
+    <h6 id ="date7"></h6>
+    <br><br><br>
+    <h1 id="title1">Password has Been Resetted</h1>
+    <div class="container">
+      <button onclick="time()" type="button" id = "time">Click For Time<p id ="pswR"></p></button>
+      <br><br>
+      <p><button onclick="chooseLogin()" type="button" class="homepagebtn">Login</button></p>
+      <p><button onclick="home()" type="button" class="logoutbtn">Cancel</button></p>
+    </div>
+    </div>
+
+    <div id="searchentry" hidden>
+      <h1>Peace of Mind</h1>
+      <h4>Todays date is</h4>
+      <p id="date5"></p>
+      <button onclick="time()" type="button" id="time4"></button>
+      <br><br>
+  
+      <div class="container">
+        <p><button onclick="logout5()" type="button" class="logoutbtn">Logout</button></p>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="ENTER DATE: D/MM/YYYY" id="searchbar">
+        <button type="submit" onclick="searchentry()" id="searchbutton">Search</button>
+      </div>
+    </div>
+
+    <div id="searchresults" hidden>
+      <h1>Peace of Mind</h1>
+      <div class="container">
+        <h4>Todays date is</h4>,
+        <p id="date6"></p>
+        <button onclick="time()" type="button" id="time5"></button>
+        <p><button onclick="logout6()" type="button" id="searchlogoutbtn">Logout</button></p>
+      </div>
+      <div class="search-container">
+        <input type="text" id="searchbar2">
+        <button type="submit" onclick="searchentry()" id="searchbutton2">Search</button>
+        <p id="results">Results</p>
+       <div class="resultbox" id="resultbox"> </div> 
+       <p id="selectdiary"></p>
+       <button id="editpastentry" onclick="edit_entry()">View/Edit entry</button>
+      </div>
+    </div>
+</body>
+
+</html>
